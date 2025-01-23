@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eminem Fan Page</title>
+    <style>
+      :root {
+        --primary-color: #1a1a1a;
+        --secondary-color: #f3f3f3;
+        --accent-color: #ff4136;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        line-height: 1.6;
+      }
+      header {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        text-align: center;
+        padding: 2em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      nav {
+        background-color: var(--accent-color);
+        padding: 1em 0;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0 1em;
+      }
+      nav ul li a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+      main {
+        max-width: 1000px;
+        margin: 2em auto;
+        padding: 0 2em;
+      }
+      section {
+        margin-bottom: 3em;
+        background-color: white;
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: var(--accent-color);
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 0.5em;
+      }
+      #eminem-image {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: 2em auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      button {
+        display: block;
+        margin: 1em auto;
+        padding: 0.8em 1.5em;
+        font-size: 1em;
+        background-color: var(--accent-color);
+        color: var(--secondary-color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #e60000;
+      }
+      #fact-display {
+        background-color: #f9f9f9;
+        border-left: 4px solid var(--accent-color);
+        padding: 1em;
+        margin-top: 1em;
+      }
+      .album-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1em;
+      }
+      .album {
+        background-color: #f9f9f9;
+        padding: 1em;
+        border-radius: 5px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Eminem Fan Page</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#discography">Discography</a></li>
+        <li><a href="#awards">Awards</a></li>
+      </ul>
+    </nav>
+    <main>
+      <img
+        id="eminem-image"
+        src="https://www.billboard.com/wp-content/uploads/2024/07/eminem-hwof-2020-billboard-1548.jpg"
+        alt="Eminem"
+      />
+
+      <section id="about">
+        <h2>About Eminem</h2>
+        <p>
+          Eminem, born Marshall Bruce Mathers III on October 17, 1972, is an
+          American rapper, songwriter, and record producer. Known for his
+          technical prowess, complex lyrics, and controversial themes, Eminem
+          has become one of the best-selling music artists of all time and is
+          often cited as one of the greatest rappers ever.
+        </p>
+        <p>
+          Rising to fame in the late 1990s, Eminem's unique style and
+          provocative content quickly garnered both critical acclaim and public
+          controversy. His alter ego, Slim Shady, became a cultural phenomenon,
+          pushing the boundaries of hip-hop and popular music.
+        </p>
+        <button id="fact-button">Show Random Fact</button>
+        <p id="fact-display"></p>
+      </section>
+
+      <section id="discography">
+        <h2>Discography</h2>
+        <div class="album-list">
+          <div class="album">
+            <h3>The Slim Shady LP</h3>
+            <p>Released: 1999</p>
+          </div>
+          <div class="album">
+            <h3>The Marshall Mathers LP</h3>
+            <p>Released: 2000</p>
+          </div>
+          <div class="album">
+            <h3>The Eminem Show</h3>
+            <p>Released: 2002</p>
+          </div>
+          <div class="album">
+            <h3>Encore</h3>
+            <p>Released: 2004</p>
+          </div>
+          <div class="album">
+            <h3>Relapse</h3>
+            <p>Released: 2009</p>
+          </div>
+          <div class="album">
+            <h3>Recovery</h3>
+            <p>Released: 2010</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards">
+        <h2>Awards and Achievements</h2>
+        <ul>
+          <li>15 Grammy Awards</li>
+          <li>17 Billboard Music Awards</li>
+          <li>Academy Award for Best Original Song ("Lose Yourself")</li>
+          <li>
+            First artist to win Best Rap Album Grammy for three consecutive
+            albums
+          </li>
+          <li>Best-selling artist of the 2000s in the United States</li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      const facts = [
+        "Eminem's real name is Marshall Bruce Mathers III.",
+        "He was born on October 17, 1972, in St. Joseph, Missouri.",
+        "Eminem has won 15 Grammy Awards.",
+        "His album 'The Marshall Mathers LP' is one of the fastest-selling albums in history.",
+        "Eminem starred in the semi-autobiographical film '8 Mile' in 2002.",
+        "He founded the record label Shady Records in 1999.",
+        "Eminem has been the best-selling hip-hop artist of all time.",
+        "His group D12 had two chart-topping albums in the early 2000s.",
+        "He has collaborated with numerous artists across various genres.",
+        "Eminem is known for his alter ego 'Slim Shady'.",
+      ];
+
+      const factButton = document.getElementById("fact-button");
+      const factDisplay = document.getElementById("fact-display");
+
+      factButton.addEventListener("click", () => {
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
+        factDisplay.textContent = randomFact;
+      });
+    </script>
+  </body>
+</html>
