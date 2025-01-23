@@ -1,221 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eminem Fan Page</title>
-    <style>
-      :root {
-        --primary-color: #1a1a1a;
-        --secondary-color: #f3f3f3;
-        --accent-color: #ff4136;
-      }
-      body {
-        font-family: "Arial", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: var(--secondary-color);
-        color: var(--primary-color);
-        line-height: 1.6;
-      }
-      header {
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
-        text-align: center;
-        padding: 2em 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      header h1 {
-        margin: 0;
-        font-size: 2.5em;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-      nav {
-        background-color: var(--accent-color);
-        padding: 1em 0;
-      }
-      nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        margin: 0 1em;
-      }
-      nav ul li a {
-        color: var(--secondary-color);
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-      }
-      nav ul li a:hover {
-        color: var(--primary-color);
-      }
-      main {
-        max-width: 1000px;
-        margin: 2em auto;
-        padding: 0 2em;
-      }
-      section {
-        margin-bottom: 3em;
-        background-color: white;
-        padding: 2em;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      h2 {
-        color: var(--accent-color);
-        border-bottom: 2px solid var(--accent-color);
-        padding-bottom: 0.5em;
-      }
-      #eminem-image {
-        width: 100%;
-        max-width: 500px;
-        display: block;
-        margin: 2em auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-      button {
-        display: block;
-        margin: 1em auto;
-        padding: 0.8em 1.5em;
-        font-size: 1em;
-        background-color: var(--accent-color);
-        color: var(--secondary-color);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      button:hover {
-        background-color: #e60000;
-      }
-      #fact-display {
-        background-color: #f9f9f9;
-        border-left: 4px solid var(--accent-color);
-        padding: 1em;
-        margin-top: 1em;
-      }
-      .album-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1em;
-      }
-      .album {
-        background-color: #f9f9f9;
-        padding: 1em;
-        border-radius: 5px;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <header>
-      <h1>Eminem Fan Page</h1>
+        <h1>Eminem Fan Page</h1>
     </header>
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#discography">Discography</a></li>
-        <li><a href="#awards">Awards</a></li>
-      </ul>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#discography">Discography</a></li>
+            <li><a href="#awards">Awards</a></li>
+        </ul>
     </nav>
     <main>
-      <img
-        id="eminem-image"
-        src="https://www.billboard.com/wp-content/uploads/2024/07/eminem-hwof-2020-billboard-1548.jpg"
-        alt="Eminem"
-      />
+        <img id="eminem-image" src="data:image/jpeg;base64,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" alt="Eminem">
+        
+        <section id="about">
+            <h2>About Eminem</h2>
+            <p>Eminem, born Marshall Bruce Mathers III on October 17, 1972, is an American rapper, songwriter, and record producer. Known for his technical prowess, complex lyrics, and controversial themes, Eminem has become one of the best-selling music artists of all time and is often cited as one of the greatest rappers ever.</p>
+            <p>Rising to fame in the late 1990s, Eminem's unique style and provocative content quickly garnered both critical acclaim and public controversy. His alter ego, Slim Shady, became a cultural phenomenon, pushing the boundaries of hip-hop and popular music.</p>
+            <button id="fact-button">Show Random Fact</button>
+            <p id="fact-display"></p>
+        </section>
 
-      <section id="about">
-        <h2>About Eminem</h2>
-        <p>
-          Eminem, born Marshall Bruce Mathers III on October 17, 1972, is an
-          American rapper, songwriter, and record producer. Known for his
-          technical prowess, complex lyrics, and controversial themes, Eminem
-          has become one of the best-selling music artists of all time and is
-          often cited as one of the greatest rappers ever.
-        </p>
-        <p>
-          Rising to fame in the late 1990s, Eminem's unique style and
-          provocative content quickly garnered both critical acclaim and public
-          controversy. His alter ego, Slim Shady, became a cultural phenomenon,
-          pushing the boundaries of hip-hop and popular music.
-        </p>
-        <button id="fact-button">Show Random Fact</button>
-        <p id="fact-display"></p>
-      </section>
+        <section id="discography">
+            <h2>Discography</h2>
+            <div class="album-list">
+                <div class="album">
+                    <h3>The Slim Shady LP</h3>
+                    <p>Released: 1999</p>
+                </div>
+                <div class="album">
+                    <h3>The Marshall Mathers LP</h3>
+                    <p>Released: 2000</p>
+                </div>
+                <div class="album">
+                    <h3>The Eminem Show</h3>
+                    <p>Released: 2002</p>
+                </div>
+                <div class="album">
+                    <h3>Encore</h3>
+                    <p>Released: 2004</p>
+                </div>
+                <div class="album">
+                    <h3>Relapse</h3>
+                    <p>Released: 2009</p>
+                </div>
+                <div class="album">
+                    <h3>Recovery</h3>
+                    <p>Released: 2010</p>
+                </div>
+            </div>
+        </section>
 
-      <section id="discography">
-        <h2>Discography</h2>
-        <div class="album-list">
-          <div class="album">
-            <h3>The Slim Shady LP</h3>
-            <p>Released: 1999</p>
-          </div>
-          <div class="album">
-            <h3>The Marshall Mathers LP</h3>
-            <p>Released: 2000</p>
-          </div>
-          <div class="album">
-            <h3>The Eminem Show</h3>
-            <p>Released: 2002</p>
-          </div>
-          <div class="album">
-            <h3>Encore</h3>
-            <p>Released: 2004</p>
-          </div>
-          <div class="album">
-            <h3>Relapse</h3>
-            <p>Released: 2009</p>
-          </div>
-          <div class="album">
-            <h3>Recovery</h3>
-            <p>Released: 2010</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="awards">
-        <h2>Awards and Achievements</h2>
-        <ul>
-          <li>15 Grammy Awards</li>
-          <li>17 Billboard Music Awards</li>
-          <li>Academy Award for Best Original Song ("Lose Yourself")</li>
-          <li>
-            First artist to win Best Rap Album Grammy for three consecutive
-            albums
-          </li>
-          <li>Best-selling artist of the 2000s in the United States</li>
-        </ul>
-      </section>
+        <section id="awards">
+            <h2>Awards and Achievements</h2>
+            <ul>
+                <li>15 Grammy Awards</li>
+                <li>17 Billboard Music Awards</li>
+                <li>Academy Award for Best Original Song ("Lose Yourself")</li>
+                <li>First artist to win Best Rap Album Grammy for three consecutive albums</li>
+                <li>Best-selling artist of the 2000s in the United States</li>
+            </ul>
+        </section>
     </main>
 
     <script>
-      const facts = [
-        "Eminem's real name is Marshall Bruce Mathers III.",
-        "He was born on October 17, 1972, in St. Joseph, Missouri.",
-        "Eminem has won 15 Grammy Awards.",
-        "His album 'The Marshall Mathers LP' is one of the fastest-selling albums in history.",
-        "Eminem starred in the semi-autobiographical film '8 Mile' in 2002.",
-        "He founded the record label Shady Records in 1999.",
-        "Eminem has been the best-selling hip-hop artist of all time.",
-        "His group D12 had two chart-topping albums in the early 2000s.",
-        "He has collaborated with numerous artists across various genres.",
-        "Eminem is known for his alter ego 'Slim Shady'.",
-      ];
+        const facts = [
+            "Eminem's real name is Marshall Bruce Mathers III.",
+            "He was born on October 17, 1972, in St. Joseph, Missouri.",
+            "Eminem has won 15 Grammy Awards.",
+            "His album 'The Marshall Mathers LP' is one of the fastest-selling albums in history.",
+            "Eminem starred in the semi-autobiographical film '8 Mile' in 2002.",
+            "He founded the record label Shady Records in 1999.",
+            "Eminem has been the best-selling hip-hop artist of all time.",
+            "His group D12 had two chart-topping albums in the early 2000s.",
+            "He has collaborated with numerous artists across various genres.",
+            "Eminem is known for his alter ego 'Slim Shady'."
+        ];
 
-      const factButton = document.getElementById("fact-button");
-      const factDisplay = document.getElementById("fact-display");
+        const factButton = document.getElementById('fact-button');
+        const factDisplay = document.getElementById('fact-display');
 
-      factButton.addEventListener("click", () => {
-        const randomFact = facts[Math.floor(Math.random() * facts.length)];
-        factDisplay.textContent = randomFact;
-      });
+        factButton.addEventListener('click', () => {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            factDisplay.textContent = randomFact;
+        });
     </script>
-  </body>
+</body>
 </html>
